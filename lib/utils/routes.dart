@@ -5,7 +5,6 @@ import 'package:safety/pages/center_map.dart';
 import 'package:safety/pages/emergency_dashboard.dart';
 import 'package:safety/pages/emergency_map.dart';
 import 'package:safety/pages/emergency_people_list.dart';
-import 'package:safety/pages/main_dashboard.dart';
 import 'package:safety/pages/nearby_places.dart';
 import 'package:safety/pages/photo_capture.dart';
 import 'package:safety/pages/video_capture.dart';
@@ -19,7 +18,6 @@ class Routes {
     Splash.route: (BuildContext context) => Splash(),
     Switcher.route: (BuildContext context) => Switcher(),
     SOSPage.route: (BuildContext context) => SOSPage(),
-    MainDashboard.route: (BuildContext context) => MainDashboard(),
     Hom.route: (BuildContext context) => Hom(),
     ARDetectionPage.route: (BuildContext context) => ARDetectionPage(),
     PhotoCapture.route: (BuildContext context) => PhotoCapture(),

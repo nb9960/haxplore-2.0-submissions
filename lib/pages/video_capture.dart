@@ -69,7 +69,7 @@ class _VideoScreenState extends State<VideoCapture> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Capture Video'),
-        backgroundColor: Color(0xffb72334),
+        // backgroundColor: Color(0xffb72334),
       ),
       body: Container(
         child: SafeArea(
@@ -129,7 +129,7 @@ class _VideoScreenState extends State<VideoCapture> {
                 child: controller.value.isRecordingVideo
                     ? Icon(Icons.stop_circle)
                     : Icon(Icons.video_call),
-                backgroundColor: Color(0xffb72334),
+                backgroundColor: Color(0xff17DAA0),
                 onPressed: () {
                   _onCapturePressed(context);
                 })
@@ -200,7 +200,7 @@ class _VideoScreenState extends State<VideoCapture> {
         if (path != null) {
           GallerySaver.saveVideo(path, albumName: albumName)
               .then((bool success) {
-            _disposeCameraController();
+            // _disposeCameraController();
             setState(() {});
           });
         }

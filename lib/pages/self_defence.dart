@@ -23,7 +23,12 @@ class _HoState extends State<Ho> {
   void initState() {
     urls.forEach((url) {
       _controller = YoutubePlayerController(
-          initialVideoId: YoutubePlayer.convertUrlToId(url));
+        initialVideoId: YoutubePlayer.convertUrlToId(url),
+        flags: YoutubePlayerFlags(
+          autoPlay: false,
+          mute: true,
+        ),
+      );
       _controllers.add(_controller);
     });
 
@@ -31,9 +36,15 @@ class _HoState extends State<Ho> {
   }
 
   Widget buildController(int no) {
-    return YoutubePlayer(
-      controller: _controllers[no],
-      showVideoProgressIndicator: true,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+      child: YoutubePlayer(
+        controller: _controllers[no],
+        // onReady: () {
+        //   _controllers[no].addListener(listener);
+        // },
+        showVideoProgressIndicator: true,
+      ),
     );
   }
 
@@ -41,7 +52,7 @@ class _HoState extends State<Ho> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Youtube Player"),
+        title: Text("Self Defence Techniques"),
       ),
       body: Container(
         child: SingleChildScrollView(

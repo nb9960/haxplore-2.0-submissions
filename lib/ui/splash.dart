@@ -18,6 +18,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3), () {
+      Navigator.pop(context);
       Navigator.pushNamed(context, Switcher.route);
     });
   }
@@ -25,7 +26,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF2B244C),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -49,25 +50,25 @@ class _SplashState extends State<Splash> {
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
-              child: ScaleAnimatedTextKit(
-                  onTap: () {
-                    print("Tap Event");
-                  },
-                  text: [
-                    "She Shield",
-                  ],
-                  textStyle: TextStyle(
-                      fontSize: 30.0,
-                      fontFamily: "Canterbury",
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.start,
-                  alignment:
-                      AlignmentDirectional.topStart // or Alignment.topLeft
-                  ),
-            ),
+            // Container(
+            //   margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
+            //   child: ScaleAnimatedTextKit(
+            //       onTap: () {
+            //         print("Tap Event");
+            //       },
+            //       text: [
+            //         "She Shield",
+            //       ],
+            //       textStyle: TextStyle(
+            //           fontSize: 30.0,
+            //           fontFamily: "Canterbury",
+            //           color: Colors.white,
+            //           fontWeight: FontWeight.bold),
+            //       textAlign: TextAlign.start,
+            //       alignment:
+            //           AlignmentDirectional.topStart // or Alignment.topLeft
+            //       ),
+            // ),
           ],
         ),
       ),

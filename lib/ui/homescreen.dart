@@ -47,27 +47,6 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
     super.initState();
   }
 
-  // void _onTapped(int index){
-  //   setState((){
-  //     _currentIndex=index;
-  //   });
-  //   if(_currentIndex==0){
-  //     Navigator.push(
-  //       context,
-  //        MaterialPageRoute(
-  //       builder: (context) =>
-  //       CameraSwitcher()));
-  //   }
-  //   else if(_currentIndex==1){
-  //     Navigator.pushNamed(context, 'voice');
-  //   }
-  //   else if(_currentIndex==2){
-  //    Navigator.push(
-  //          context,
-  //           MaterialPageRoute(
-  //            builder: (context) => NearBy()));
-  //   }
-  // }
   void _runAnimation() async {
     while (true) {
       await _animationController.forward();
@@ -115,7 +94,7 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
             gradient: RadialGradient(
-                colors: [HexColor('#FFC3CF'), HexColor('#F7BB97')],
+                colors: [HexColor('#534691'), HexColor('#171328')],
                 // begin: Alignment.topLeft,
                 // end: Alignment.bottomRight
                 radius: 1.5)),
@@ -140,7 +119,7 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                         textStyle: TextStyle(
                             fontSize: 50.0,
                             fontFamily: "Canterbury",
-                            color: HexColor("#ea6a88"),
+                            color: HexColor("#E6E3F2"),
                             fontWeight: FontWeight.bold),
                         textAlign: TextAlign.start,
                         alignment: AlignmentDirectional
@@ -171,15 +150,15 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                           ],
                           borderRadius: BorderRadius.circular(1000),
                           gradient: RadialGradient(radius: 0.7, colors: [
-                            HexColor("#DD5E89"),
-                            HexColor("#F7BB97"),
+                            HexColor('#534691'),
+                            HexColor('#171328')
                           ]),
                           border:
-                              Border.all(color: HexColor("#ea6a88"), width: 2)),
+                              Border.all(color: HexColor('#171328'), width: 2)),
                       child: AvatarGlow(
                         endRadius: 200.0,
                         startDelay: Duration(seconds: 1),
-                        glowColor: Colors.blueAccent,
+                        glowColor: Colors.deepPurple[50],
                         child: CircleList(
                           initialAngle: 55,
                           outerRadius: MediaQuery.of(context).size.width / 2.2,
@@ -214,16 +193,17 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                           children: [
                             AvatarGlow(
                               endRadius: 70.0,
-                              glowColor: Colors.pink,
+                              glowColor: HexColor("#C7C1E1"),
                               child: Container(
                                 padding: EdgeInsets.all(0),
                                 width: 80,
                                 height: 80,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    // color: Colors.transparent,
-                                    border: Border.all(
-                                        color: HexColor("#ea6a88"), width: 3)),
+                                  borderRadius: BorderRadius.circular(100),
+                                  // color: Colors.transparent,
+                                  // border: Border.all(
+                                  //     color: HexColor("#171328"), width: 4)
+                                ),
                                 child: RaisedButton(
                                   elevation: 1,
                                   color: Colors.white70,
@@ -253,7 +233,7 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                               angle: (pi / 180) * -35,
                                               child: Icon(Constants.shakeIcon,
                                                   size: 70,
-                                                  color: Color(0xffffc400)),
+                                                  color: Color(0xff2B244C)),
                                             ),
                                           ),
                                           SizedBox(
@@ -263,7 +243,7 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                             'Shake to capture and activate emergency',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
-                                              color: Colors.orange,
+                                              color: HexColor("#2B244C"),
                                               fontSize: 20,
                                               // fontWeight:
                                               // FontWeight.w300,
@@ -283,12 +263,12 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                       Icon(
                                         Icons.vibration,
                                         size: 40,
-                                        color: HexColor("#b72334"),
+                                        color: HexColor("#12AB7D"),
                                       ),
                                       Text(
                                         'Shake',
                                         style: TextStyle(
-                                            color: HexColor("#b72334"),
+                                            color: HexColor("#12AB7D"),
                                             fontSize: 12,
                                             fontWeight: FontWeight.bold),
                                       )
@@ -299,16 +279,17 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                             ), //(shake)
                             AvatarGlow(
                               endRadius: 70.0,
-                              glowColor: Colors.pink,
+                              glowColor: HexColor("#C7C1E1"),
                               child: Container(
                                 padding: EdgeInsets.all(0),
                                 width: 80,
                                 height: 80,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    // color: Colors.transparent,
-                                    border: Border.all(
-                                        color: HexColor("#ea6a88"), width: 3)),
+                                  borderRadius: BorderRadius.circular(100),
+                                  // color: Colors.transparent,
+                                  // border: Border.all(
+                                  //     color: HexColor("#ea6a88"), width: 3)
+                                ),
                                 child: RaisedButton(
                                   elevation: 1,
                                   color: Colors.white70,
@@ -331,7 +312,7 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                                     border: Border.all(
                                                         width: 20.0,
                                                         color:
-                                                            Colors.orange[800]),
+                                                            Color(0xff2B244C)),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             3000.0),
@@ -389,18 +370,18 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                                                     .notifications_active,
                                                                 size: 70,
                                                                 color: Color(
-                                                                    0xffffc400)),
+                                                                    0xff2B244C)),
                                                           ),
                                                           SizedBox(
                                                             height: 20,
                                                           ),
                                                           Text(
-                                                            'Playing Siren\n\n Tap to play again',
+                                                            'Tap to play\n\nSiren',
                                                             textAlign: TextAlign
                                                                 .center,
                                                             style: TextStyle(
-                                                              color:
-                                                                  Colors.orange,
+                                                              color: Color(
+                                                                  0xff2B244C),
                                                               fontSize: 20,
                                                               // fontWeight:
                                                               // FontWeight.w300,
@@ -426,12 +407,12 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                       Icon(
                                         Icons.speaker_phone,
                                         size: 40,
-                                        color: HexColor("#b72334"),
+                                        color: HexColor("#12AB7D"),
                                       ),
                                       Text(
                                         'Siren',
                                         style: TextStyle(
-                                            color: HexColor("#b72334"),
+                                            color: HexColor("#12AB7D"),
                                             fontSize: 12,
                                             fontWeight: FontWeight.bold),
                                       )
@@ -442,16 +423,17 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                             ), //(siren)
                             AvatarGlow(
                               endRadius: 70.0,
-                              glowColor: Colors.pink,
+                              glowColor: HexColor("#C7C1E1"),
                               child: Container(
                                 padding: EdgeInsets.all(0),
                                 width: 80,
                                 height: 80,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    // color: Colors.transparent,
-                                    border: Border.all(
-                                        color: HexColor("#ea6a88"), width: 3)),
+                                  borderRadius: BorderRadius.circular(100),
+                                  // color: Colors.transparent,
+                                  // border: Border.all(
+                                  //     color: HexColor("#ea6a88"), width: 3)
+                                ),
                                 child: RaisedButton(
                                   elevation: 1,
                                   color: Colors.white70,
@@ -474,7 +456,7 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                                     border: Border.all(
                                                         width: 20.0,
                                                         color:
-                                                            Colors.orange[800]),
+                                                            Color(0xff2B244C)),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             3000.0),
@@ -511,7 +493,7 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                                                 Icons.call,
                                                                 size: 70,
                                                                 color: Color(
-                                                                    0xffffc400)),
+                                                                    0xff2B244C)),
                                                           ),
                                                           SizedBox(
                                                             height: 20,
@@ -521,8 +503,8 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                                             textAlign: TextAlign
                                                                 .center,
                                                             style: TextStyle(
-                                                              color:
-                                                                  Colors.orange,
+                                                              color: Color(
+                                                                  0xff2B244C),
                                                               fontSize: 20,
                                                               // fontWeight:
                                                               // FontWeight.w300,
@@ -545,7 +527,7 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                                     border: Border.all(
                                                         width: 20.0,
                                                         color:
-                                                            Colors.orange[800]),
+                                                            Color(0xff2B244C)),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             3000.0),
@@ -607,7 +589,7 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                                                 Icons.message,
                                                                 size: 70,
                                                                 color: Color(
-                                                                    0xffffc400)),
+                                                                    0xff2B244C)),
                                                           ),
                                                           SizedBox(
                                                             height: 20,
@@ -617,8 +599,8 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                                             textAlign: TextAlign
                                                                 .center,
                                                             style: TextStyle(
-                                                              color:
-                                                                  Colors.orange,
+                                                              color: Color(
+                                                                  0xff2B244C),
                                                               fontSize: 20,
                                                               // fontWeight:
                                                               // FontWeight.w300,
@@ -645,12 +627,12 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                       Icon(
                                         Icons.call,
                                         size: 40,
-                                        color: HexColor("#b72334"),
+                                        color: HexColor("#12AB7D"),
                                       ),
                                       Text(
                                         'SOS',
                                         style: TextStyle(
-                                            color: HexColor("#b72334"),
+                                            color: HexColor("#12AB7D"),
                                             fontSize: 12,
                                             fontWeight: FontWeight.bold),
                                       )
@@ -661,16 +643,17 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                             ), //(sos)
                             AvatarGlow(
                               endRadius: 70.0,
-                              glowColor: Colors.pink,
+                              glowColor: Colors.deepPurple[50],
                               child: Container(
                                 padding: EdgeInsets.all(0),
                                 width: 80,
                                 height: 80,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    // color: Colors.transparent,
-                                    border: Border.all(
-                                        color: HexColor("#ea6a88"), width: 3)),
+                                  borderRadius: BorderRadius.circular(100),
+                                  // color: Colors.transparent,
+                                  // border: Border.all(
+                                  //     color: HexColor("#ea6a88"), width: 3)
+                                ),
                                 child: RaisedButton(
                                   elevation: 1,
                                   color: Colors.white70,
@@ -684,12 +667,12 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                       Icon(
                                         Icons.local_taxi,
                                         size: 40,
-                                        color: HexColor("#b72334"),
+                                        color: HexColor("#12AB7D"),
                                       ),
                                       Text(
                                         'Taxi',
                                         style: TextStyle(
-                                            color: HexColor("#b72334"),
+                                            color: HexColor("#12AB7D"),
                                             fontSize: 12,
                                             fontWeight: FontWeight.bold),
                                       )
@@ -700,16 +683,17 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                             ), //(Taxi)
                             AvatarGlow(
                               endRadius: 70.0,
-                              glowColor: Colors.pink,
+                              glowColor: Colors.deepPurple[50],
                               child: Container(
                                 padding: EdgeInsets.all(0),
                                 width: 80,
                                 height: 80,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    // color: Colors.transparent,
-                                    border: Border.all(
-                                        color: HexColor("#ea6a88"), width: 3)),
+                                  borderRadius: BorderRadius.circular(100),
+                                  // color: Colors.transparent,
+                                  // border: Border.all(
+                                  //     color: HexColor("#ea6a88"), width: 3)
+                                ),
                                 child: RaisedButton(
                                   elevation: 1,
                                   color: Colors.white70,
@@ -727,12 +711,12 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                       Icon(
                                         Icons.live_tv,
                                         size: 40,
-                                        color: HexColor("#b72334"),
+                                        color: HexColor("#12AB7D"),
                                       ),
                                       Text(
                                         'News',
                                         style: TextStyle(
-                                            color: HexColor("#b72334"),
+                                            color: HexColor("#12AB7D"),
                                             fontSize: 12,
                                             fontWeight: FontWeight.bold),
                                       )
@@ -743,16 +727,17 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                             ), //news
                             AvatarGlow(
                               endRadius: 70.0,
-                              glowColor: Colors.pink,
+                              glowColor: Colors.deepPurple[50],
                               child: Container(
                                 padding: EdgeInsets.all(0),
                                 width: 80,
                                 height: 80,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    // color: Colors.transparent,
-                                    border: Border.all(
-                                        color: HexColor("#ea6a88"), width: 3)),
+                                  borderRadius: BorderRadius.circular(100),
+                                  // color: Colors.transparent,
+                                  // border: Border.all(
+                                  //     color: HexColor("#ea6a88"), width: 3)
+                                ),
                                 child: RaisedButton(
                                   elevation: 1,
                                   color: Colors.white70,
@@ -771,12 +756,12 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
                                       Icon(
                                         Icons.local_parking,
                                         size: 40,
-                                        color: HexColor("#b72334"),
+                                        color: HexColor("#12AB7D"),
                                       ),
                                       Text(
                                         message,
                                         style: TextStyle(
-                                            color: HexColor("#b72334"),
+                                            color: HexColor("#12AB7D"),
                                             fontSize: 12,
                                             fontWeight: FontWeight.bold),
                                       )
@@ -797,10 +782,10 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
         ),
       ),
       bottomNavigationBar: FancyBottomNavigation(
-        //activeIconColor:Color(0xffb72334) ,
-        inactiveIconColor: Color(0xffb72334),
-        barBackgroundColor: Colors.white70,
-        circleColor: Color(0xffb72334),
+        // activeIconColor:Color(0xffb72334) ,
+        inactiveIconColor: Color(0xff39EAB5),
+        barBackgroundColor: Color(0xFF171328),
+        circleColor: Color(0xff39EAB5),
         tabs: [
           TabData(
               iconData: Icons.camera,
@@ -838,71 +823,6 @@ class _HomesState extends State<Homes> with SingleTickerProviderStateMixin {
           });
         },
       ),
-      //  bottomNavigationBar: BottomNavigationBar(
-      //    currentIndex: _currentIndex,
-      //   //  decoration: BoxDecoration(
-      //   //       gradient: RadialGradient(
-      //   //           colors: [HexColor('#FFC3CF'), HexColor('#F7BB97')],
-      //   //           // begin: Alignment.topLeft,
-      //   //           // end: Alignment.bottomRight
-      //   //           radius: 1.5)),
-      //    onTap:_onTapped,
-      //   backgroundColor:Color(0xfff7bcb3),
-      //    iconSize: 35.0,
-      //    selectedItemColor: Color(0xffb72334),
-      //    unselectedItemColor:Color(0xffb72334),
-      //    items: [
-      //    BottomNavigationBarItem(icon: Icon(Icons.camera),label:""),
-      //    BottomNavigationBarItem(icon: Icon(Icons.keyboard_voice),label:""),
-      //    BottomNavigationBarItem(icon: Icon(Icons.place),label:"")
-      //  ],),
-      // bottomNavigationBar:Row(
-
-      //   children: [
-      //     Expanded(
-      //                 child: FloatingActionButton(
-      //         onPressed: () {
-      //           Navigator.pushNamed(context, 'voice');
-      //         },
-      //         child: Icon(
-      //           Icons.keyboard_voice,
-      //           size: 40,
-      //           color: HexColor("#b72334"),
-      //           // hoverColor: Colors.white,
-      //         ),
-      //         backgroundColor: Colors.white70,
-      //       ),
-      //     ),
-      //     Expanded(
-      //                 child: FloatingActionButton(
-      //         onPressed: () {
-      //           Navigator.pushNamed(context, 'voice');
-      //         },
-      //         child: Icon(
-      //           Icons.keyboard_voice,
-      //           size: 40,
-      //           color: HexColor("#b72334"),
-      //           // hoverColor: Colors.white,
-      //         ),
-      //         backgroundColor: Colors.white70,
-      //       ),
-      //     ),
-      //     Expanded(
-      //                 child: FloatingActionButton(
-      //         onPressed: () {
-      //           Navigator.pushNamed(context, 'voice');
-      //         },
-      //         child: Icon(
-      //           Icons.keyboard_voice,
-      //           size: 40,
-      //           color: HexColor("#b72334"),
-      //           // hoverColor: Colors.white,
-      //         ),
-      //         backgroundColor: Colors.white70,
-      //       ),
-      //     ),
-      //   ],
-      // ),
     );
   }
 

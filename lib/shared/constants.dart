@@ -29,7 +29,7 @@ class Gradients {
     tileMode: TileMode.repeated,
   );
 
-  static const Color mainColor = Color(0xffff9100);
+  static const Color mainColor = Color(0xff2B244C);
 
   static void _sendSMS(String message, List<String> recipents) async {
     String _result = await sendSMS(message: message, recipients: recipents)
@@ -68,8 +68,7 @@ class Gradients {
                           padding: EdgeInsets.all(20),
 
                           decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Color.fromRGBO(253, 137, 1, 0.65)),
+                              shape: BoxShape.circle, color: Color(0xff2B244C)),
 
                           // duration: Duration(seconds: 1),
 
@@ -195,7 +194,7 @@ class Constants {
     print("${first.featureName} : ${first.addressLine}");
     String message =
         "Help! I'm in an emergency. I'm at (${first.featureName}, ${first.addressLine}).";
-    List<String> recipents = ["8920532416"];
+    List<String> recipents = ["8840965840"];
 
     Gradients._sendSMS(message, recipents);
   };

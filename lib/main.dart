@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/services.dart';
 import 'package:quick_actions/quick_actions.dart';
 import 'package:flutter/material.dart';
 import 'package:hardware_buttons/hardware_buttons.dart' as HardwareButtons;
@@ -12,6 +13,7 @@ import 'package:safety/ui/splash.dart';
 import 'package:safety/utils/routes.dart';
 
 void main() async {
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   WidgetsFlutterBinding.ensureInitialized();
   setupLocator();
   runApp(MyApp());
@@ -103,8 +105,12 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         title: 'She Shield',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
+          brightness: Brightness.dark,
+          primaryColor: Color(0xFF2B244C),
+          scaffoldBackgroundColor: Color(0xFF2B244C),
+          bottomAppBarColor: Color(0xFF2B244C),
+          backgroundColor: Color(0xFF2B244C),
         ),
         routes: Routes().getRoutes(),
         navigatorKey: appNavigator.navigatorKey,

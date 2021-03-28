@@ -18,7 +18,9 @@ class Switcher extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(
-                begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [HexColor('#FFC3CF'), HexColor('#F7BB97')])),
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [HexColor('#C7C1E1'), HexColor('#534691')])),
         child: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -29,13 +31,15 @@ class Switcher extends StatelessWidget {
 
               FlatButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Homes()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Homes()));
                 },
                 child: Stack(
                   children: [
                     Center(
                       child: Container(
-                        margin: EdgeInsets.fromLTRB(0, MediaQuery.of(context).size.width / 15, 0, 0),
+                        margin: EdgeInsets.fromLTRB(
+                            0, MediaQuery.of(context).size.width / 15, 0, 0),
                         child: AvatarGlow(
                           endRadius: 130.0,
                           glowColor: Colors.blueAccent,
@@ -61,10 +65,14 @@ class Switcher extends StatelessWidget {
                     Center(
                         child: Container(
                             padding: EdgeInsets.all(20),
-                            margin: EdgeInsets.fromLTRB(0, MediaQuery.of(context).size.width / 3.5, 0, 0),
+                            margin: EdgeInsets.fromLTRB(0,
+                                MediaQuery.of(context).size.width / 3.5, 0, 0),
                             child: Text(
                               'Safe',
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, color: Colors.black54),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                  color: Colors.black54),
                             ))),
                   ],
                 ),
@@ -92,27 +100,6 @@ class Switcher extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              // Expanded(
-              //   child: Center(
-              //     child: SOSButton(
-              //       fromEmergency: false,
-              //       startColor: Colors.redAccent[400],
-              //       endColor: Colors.deepOrange,
-              //       child: Center(
-              //         child: AutoSizeText(
-              //           'Emergency',
-              //           style: TextStyle(color: Colors.white, fontSize: 50),
-              //           maxLines: 1,
-              //         ),
-              //       ),
-              //       onPressed: () {
-              //         Navigator.of(context)
-              //             .pushReplacementNamed('Emergency_Dashboard');
-              //       },
-              //     ),
-              //   ),
-              // ),
-
               FlatButton(
                 autofocus: false,
                 onPressed: () {
@@ -122,7 +109,8 @@ class Switcher extends StatelessWidget {
                   children: [
                     Center(
                       child: Container(
-                        margin: EdgeInsets.fromLTRB(0, MediaQuery.of(context).size.width / 15, 0, 0),
+                        margin: EdgeInsets.fromLTRB(
+                            0, MediaQuery.of(context).size.width / 15, 0, 0),
                         child: AvatarGlow(
                           endRadius: 130.0,
                           glowColor: Colors.deepOrange,
@@ -147,10 +135,14 @@ class Switcher extends StatelessWidget {
                     ),
                     Center(
                         child: Container(
-                            margin: EdgeInsets.fromLTRB(0, MediaQuery.of(context).size.width / 3.5, 0, 0),
+                            margin: EdgeInsets.fromLTRB(0,
+                                MediaQuery.of(context).size.width / 3.5, 0, 0),
                             child: Text(
                               'Danger',
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, color: Colors.black54),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                  color: Colors.black54),
                             ))),
                   ],
                 ),

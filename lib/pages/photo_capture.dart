@@ -75,7 +75,7 @@ class _CameraScreenState extends State<PhotoCapture> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Click To Share'),
-        backgroundColor: Color(0xffb72334),
+        // backgroundColor: Color(0xffb72334),
       ),
       body: Container(
         child: SafeArea(
@@ -89,7 +89,11 @@ class _CameraScreenState extends State<PhotoCapture> {
               SizedBox(height: 10.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [_cameraTogglesRowWidget(), _captureControlRowWidget(context), Spacer()],
+                children: [
+                  _cameraTogglesRowWidget(),
+                  _captureControlRowWidget(context),
+                  Spacer()
+                ],
               ),
               SizedBox(height: 20.0)
             ],
@@ -129,7 +133,7 @@ class _CameraScreenState extends State<PhotoCapture> {
           children: [
             FloatingActionButton(
                 child: Icon(Icons.camera),
-                backgroundColor: Color(0xffb72334),
+                backgroundColor: Color(0xff17DAA0),
                 onPressed: () {
                   _onCapturePressed(context);
                 })
@@ -154,7 +158,8 @@ class _CameraScreenState extends State<PhotoCapture> {
         child: FlatButton.icon(
             onPressed: _onSwitchCamera,
             icon: Icon(_getCameraLensIcon(lensDirection)),
-            label: Text("${lensDirection.toString().substring(lensDirection.toString().indexOf('.') + 1)}")),
+            label: Text(
+                "${lensDirection.toString().substring(lensDirection.toString().indexOf('.') + 1)}")),
       ),
     );
   }
@@ -173,7 +178,8 @@ class _CameraScreenState extends State<PhotoCapture> {
   }
 
   void _onSwitchCamera() {
-    selectedCameraIdx = selectedCameraIdx < cameras.length - 1 ? selectedCameraIdx + 1 : 0;
+    selectedCameraIdx =
+        selectedCameraIdx < cameras.length - 1 ? selectedCameraIdx + 1 : 0;
     CameraDescription selectedCamera = cameras[selectedCameraIdx];
     _initCameraController(selectedCamera);
   }

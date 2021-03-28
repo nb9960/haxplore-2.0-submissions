@@ -1,4 +1,4 @@
-package shagungoyal.safety
+package sheshield.app
 
 import io.flutter.embedding.android.FlutterActivity
 

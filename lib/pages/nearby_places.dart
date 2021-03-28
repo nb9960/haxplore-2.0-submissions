@@ -13,8 +13,11 @@ class NearbyPlaces extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xfffcbeac),
-        appBar: AppBar(title: Text("Nearby Places"), backgroundColor: Color(0xffb72334), centerTitle: true),
+        backgroundColor: Color(0xff534691),
+        appBar: AppBar(
+            title: Text("Nearby Places"),
+            backgroundColor: Color(0xFF2B244C),
+            centerTitle: true),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -23,7 +26,7 @@ class NearbyPlaces extends StatelessWidget {
                 message: "Police",
                 height: 70.0,
                 width: 250.0,
-                color: Color(0xffb72334),
+                color: Color(0xFF2B244C),
                 icon: Icons.local_police,
                 iconSize: 40.0,
                 radius: 56.0,
@@ -36,7 +39,7 @@ class NearbyPlaces extends StatelessWidget {
                 message: "NGO",
                 height: 70.0,
                 width: 250.0,
-                color: Color(0xffb72334),
+                color: Color(0xFF2B244C),
                 icon: FontAwesomeIcons.building,
                 iconSize: 40.0,
                 radius: 56.0,
@@ -48,7 +51,7 @@ class NearbyPlaces extends StatelessWidget {
                 message: "Hospitals",
                 height: 70.0,
                 width: 250.0,
-                color: Color(0xffb72334),
+                color: Color(0xFF2B244C),
                 icon: Icons.local_hospital,
                 iconSize: 40.0,
                 radius: 56.0,
@@ -60,7 +63,7 @@ class NearbyPlaces extends StatelessWidget {
                 message: "Public Parking",
                 height: 70.0,
                 width: 250.0,
-                color: Color(0xffb72334),
+                color: Color(0xFF2B244C),
                 icon: Icons.local_parking,
                 iconSize: 45.0,
                 radius: 56.0,

@@ -78,18 +78,18 @@ class _SpeechScreenState extends State<SpeechScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Confidence: ${(_confidence * 100.0).toStringAsFixed(1)}%'),
-        backgroundColor: Color(0xffb72334),
+        // backgroundColor: Color(0xffb72334),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: AvatarGlow(
         animate: _isListening,
-        glowColor: Color(0xfffcbeac),
+        glowColor: Color(0xff39EAB5),
         endRadius: 75.0,
         duration: const Duration(milliseconds: 2000),
         repeatPauseDuration: const Duration(milliseconds: 100),
         repeat: true,
         child: FloatingActionButton(
-          backgroundColor: Color(0xffb72334),
+          backgroundColor: Color(0xff17DAA0),
           foregroundColor: Colors.white70,
           onPressed: _listen,
           child: Icon(_isListening ? Icons.mic : Icons.mic_none),
@@ -104,7 +104,7 @@ class _SpeechScreenState extends State<SpeechScreen> {
             words: _highlights,
             textStyle: const TextStyle(
               fontSize: 32.0,
-              color: Colors.black,
+              color: Colors.white,
               fontWeight: FontWeight.w400,
             ),
           ),
@@ -143,7 +143,8 @@ class _SpeechScreenState extends State<SpeechScreen> {
               setState(() {
                 Timer(Duration(seconds: 10), () {
                   assetsAudioPlayer.stop();
-                  Navigator.pop(context, MaterialPageRoute(builder: (context) => Homes()));
+                  Navigator.pop(context,
+                      MaterialPageRoute(builder: (context) => Homes()));
                   print('stop');
                 });
                 assetsAudioPlayer.open(
@@ -164,7 +165,8 @@ class _SpeechScreenState extends State<SpeechScreen> {
     } else {
       setState(() {
         _isListening = false;
-        Navigator.of(context).pop(Homes());
+        setState(() {});
+        // Navigator.of(context).pop(Homes());
       });
       _speech.stop();
     }

@@ -37,7 +37,6 @@ Looking at the recent trends and the most powerful weapon with the humanity - te
 - Flutter
 - Google Map API
 - CrimeoMeter API
-- Firebase
 
 #### Screenshots/Demo Video
 
